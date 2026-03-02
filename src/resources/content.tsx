@@ -1,19 +1,19 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import { About, Blog, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Bernardo",
+  lastName: "Carvalheiro",
+  name: `Bernardo Carvalheiro`,
+  role: "Full-Stack Developer | Linux & Infrastructure",
   avatar: "/images/avatar.jpg",
   email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  location: "Europe/Lisbon", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Portuguese", "English"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -25,14 +25,15 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/piratecb",
     essential: true,
   },
+  /*
   {
     name: "LinkedIn",
     icon: "linkedin",
     link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
+    essential: false,
   },
   {
     name: "Instagram",
@@ -44,8 +45,8 @@ const social: Social = [
     name: "Threads",
     icon: "threads",
     link: "https://www.threads.com/@once_ui",
-    essential: true,
-  },
+    essential: false,
+  },*/
   {
     name: "Email",
     icon: "email",
@@ -60,7 +61,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Full-Stack development with a focus on systems and infrastructure</>,
   featured: {
     display: true,
     title: (
@@ -76,7 +77,9 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Full-stack developer with hands-on experience in <Text as="span" size="xl" weight="strong">Linux</Text> environments,
+    system monitoring and backend architecture.
+    Focused on building reliable and maintainable systems.
 </>
   ),
 };
@@ -102,9 +105,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+      I'm a full-stack developer with a strong interest in Linux systems,
+      infrastructure and backend architecture. 
+      Currently gaining experience in system monitoring and operational workflows
+      in a professional environment.
       </>
     ),
   },
@@ -113,23 +117,18 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Kyndryl",
+        timeframe: "2026 - Present",
+        role: "IT Intern – Systems Monitoring",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+        <>Monitoring scheduled jobs and system processes in production environment.</>,
+        <>Observing system behavior and identifying recurring failure patterns.</>,
+        <>Executing operational workflows and reporting system incidents.</>,
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/projects/project-01/cover-02.jpg",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -138,7 +137,7 @@ const about: About = {
       },
       {
         company: "Creativ3",
-        timeframe: "2018 - 2022",
+        timeframe: "2022 - Present",
         role: "Lead Designer",
         achievements: [
           <>
@@ -159,13 +158,14 @@ const about: About = {
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "High School Jácome Ratton",
+        description: <>IT Technician - Systems.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
-      },
+        name: "Institute Polytechnic of Tomar",
+        description: <>Information Systems Technologies and Programming.</>,
+      }
+
     ],
   },
   technical: {
@@ -173,20 +173,20 @@ const about: About = {
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Backend & Full-Stack",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Experience building full-stack applications using modern web technologies.</>
         ),
         tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
+          { name: "Next.js", icon: "nextjs" },
+          { name: "Node.js", icon: "javascript" },
+          { name: "PostgreSQL", icon: "database" },
+          { name: "Supabase", icon: "supabase" },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/cover-01.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -200,22 +200,22 @@ const about: About = {
         ],
       },
       {
-        title: "Next.js",
+        title: "Linux & Systems",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Experience working with Linux systems and infrastructure.</>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Linux",
+            icon: "linux",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "Bash",
+            icon: "bash",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Nginx",
+            icon: "nginx",
           },
         ],
         // optional: leave the array empty if you don't want to display images
@@ -250,6 +250,7 @@ const work: Work = {
   // All projects will be listed on the /home and /work routes
 };
 
+/*
 const gallery: Gallery = {
   path: "/gallery",
   label: "Gallery",
@@ -300,5 +301,5 @@ const gallery: Gallery = {
     },
   ],
 };
-
-export { person, social, newsletter, home, about, blog, work, gallery };
+*/
+export { person, social, newsletter, home, about, blog, work };
