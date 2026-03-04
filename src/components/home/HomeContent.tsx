@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
   Heading,
@@ -33,8 +34,25 @@ export function HomeContent({
 
   return (
     <Column maxWidth="m" gap="xl" paddingY="12" horizontal="center">
-      <Column fillWidth horizontal="center" gap="m">
-        <Column maxWidth="s" horizontal="center" align="center">
+      <Column fillWidth horizontal="center" gap="m" style={{ position: "relative" }}>
+        <Image
+          src="/images/BLogo.png"
+          alt=""
+          width={480}
+          height={480}
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            left: "-20%",
+            top: "50%",
+            transform: "translateY(-50%)",
+            opacity: 0.18,
+            pointerEvents: "none",
+            zIndex: 0,
+            userSelect: "none",
+          }}
+        />
+        <Column maxWidth="s" horizontal="center" align="center" style={{ position: "relative", zIndex: 1 }}>
           {home.featured.display && (
             <RevealFx
               fillWidth
