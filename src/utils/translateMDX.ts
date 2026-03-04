@@ -75,6 +75,21 @@ function splitIntoChunks(text: string, maxLen = 450): string[] {
   return chunks;
 }
 
+/** Returns true if the line is a markdown list item (-, *, or 1.) */
+function isListLine(line: string): boolean {
+  return /^\s*(-|\*|\d+\.)\s/.test(line);
+}
+
+/**
+ * Translates one logical block (paragraph or list item), splitting into
+ * smaller chunks first if needed.
+ */
+async function translateBlock(text: string, langPair: string): Promise<string> {
+  const chunks = splitIntoChunks(text);
+  const results = await Promise.all(chunks.map((c) => translateChunk(c, langPair)));
+  return results.join("");
+}
+
 /**
  * Translates MDX source content to the target language.
  * Splits on double-newlines (paragraph boundaries) to preserve markdown structure,
@@ -94,11 +109,21 @@ export async function translateMDX(content: string, locale: string): Promise<str
 
   const translatedParagraphs = await Promise.all(
     paragraphs.map(async (para) => {
-      const chunks = splitIntoChunks(para);
-      const translatedChunks = await Promise.all(
-        chunks.map((c) => translateChunk(c, langPair))
-      );
-      return translatedChunks.join("");
+      const lines = para.split("\n");
+
+      // If any line in this paragraph is a list item, translate each line
+      // independently so the API can't merge them together
+      if (lines.some(isListLine)) {
+        const translatedLines = await Promise.all(
+          lines.map((line) =>
+            isListLine(line) ? translateBlock(line, langPair) : translateBlock(line, langPair)
+          )
+        );
+        return translatedLines.join("\n");
+      }
+
+      // Regular paragraph — translate as one block (with chunking for long text)
+      return translateBlock(para, langPair);
     })
   );
 
