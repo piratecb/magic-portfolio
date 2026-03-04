@@ -60,7 +60,11 @@
     }
   },
   "work": {
-    "heading": "Projects – Bernardo Carvalheiro"
+    "heading": "Projects – Bernardo Carvalheiro",
+    "backLink": "Projects",
+    "relatedProjects": "Related projects",
+    "readCaseStudy": "Read case study",
+    "viewProject": "View project"
   },
   "contact": {
     "heading": "Contact me",

@@ -9,6 +9,7 @@ import {
   SmartLink,
   Text,
 } from "@once-ui-system/core";
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   href: string;
@@ -30,6 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   avatars,
   link,
 }) => {
+  const t = useTranslations("work");
   return (
     <Column fillWidth gap="m" paddingY="l" style={{ alignItems: "center" }}>
       {title && (
@@ -63,7 +65,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 style={{ margin: "0", width: "fit-content" }}
                 href={href}
               >
-                <Text variant="body-default-s">Read case study</Text>
+                <Text variant="body-default-s">{t("readCaseStudy")}</Text>
               </SmartLink>
             )}
             {link && (
@@ -72,7 +74,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 style={{ margin: "0", width: "fit-content" }}
                 href={link}
               >
-                <Text variant="body-default-s">View project</Text>
+                <Text variant="body-default-s">{t("viewProject")}</Text>
               </SmartLink>
             )}
           </Flex>

@@ -20,6 +20,9 @@ import { formatDate } from "@/utils/formatDate";
 import { ScrollToHash, CustomMDX } from "@/components";
 import { Metadata } from "next";
 import { Projects } from "@/components/work/Projects";
+import { getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
+import { translateMDX } from "@/utils/translateMDX";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   const posts = getPosts(["src", "app", "work", "projects"]);
@@ -68,6 +71,10 @@ export default async function Project({
     notFound();
   }
 
+  const t = await getTranslations("work");
+  const locale = await getLocale();
+  const translatedContent = await translateMDX(post.content, locale);
+
   const avatars =
     post.metadata.team?.map((person) => ({
       src: person.avatar,
@@ -94,7 +101,7 @@ export default async function Project({
       />
       <Column maxWidth="s" gap="16" horizontal="center" align="center">
         <SmartLink href="/work">
-          <Text variant="label-strong-m">Projects</Text>
+          <Text variant="label-strong-m">{t("backLink")}</Text>
         </SmartLink>
         <Text variant="body-default-xs" onBackground="neutral-weak" marginBottom="12">
           {post.metadata.publishedAt && formatDate(post.metadata.publishedAt)}
@@ -122,12 +129,12 @@ export default async function Project({
         <Media priority aspectRatio="16 / 9" radius="m" alt="image" src={post.metadata.images[0]} />
       )}
       <Column style={{ margin: "auto" }} as="article" maxWidth="xs">
-        <CustomMDX source={post.content} />
+        <CustomMDX source={translatedContent} />
       </Column>
       <Column fillWidth gap="40" horizontal="center" marginTop="40">
         <Line maxWidth="40" />
         <Heading as="h2" variant="heading-strong-xl" marginBottom="24">
-          Related projects
+          {t("relatedProjects")}
         </Heading>
         <Projects exclude={[post.slug]} range={[2]} />
       </Column>
