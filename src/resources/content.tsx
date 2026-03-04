@@ -61,7 +61,7 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Full-Stack development with focus on systems and infrastructure</>,
+  headline: <>Bernardo Carvalheiro</>,
   featured: {
     display: true,
     title: (
@@ -97,7 +97,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
