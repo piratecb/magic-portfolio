@@ -7,7 +7,7 @@ const person: Person = {
   name: `Bernardo Carvalheiro`,
   role: "Full-Stack Developer | Linux & Infrastructure",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
+  email: "b.carvalheiro@proton.me",
   location: "Europe/Lisbon", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Portuguese", "English"], // optional: Leave the array empty if you don't want to display languages
 };
@@ -136,21 +136,35 @@ const about: About = {
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2022 - Present",
-        role: "Lead Designer",
+        company: "Hipercálculo II",
+        timeframe: "2023 - 2023",
+        role: "Technician Intern",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Repair of computers and other electronic devices, diagnosing hardware and software issues, replacing faulty components, and ensuring proper functionality.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Customer assisting, instalation of Ubiquiti APs and Server Rack montage.
           </>,
         ],
         images: [],
       },
+      {
+        company: "Catering Company",
+        timeframe: "2022 - Present",
+        role: "Waiter",
+        achievements: [
+          <>
+            Provided excellent customer service in a fast-paced environment, consistently.
+            Events, Weddings.
+          </>,
+          <>
+            Collaborated with team members to ensure smooth operations and customer satisfaction.
+          </>,
+        ],
+        images: [],
+      },
+      
     ],
   },
   studies: {
@@ -222,6 +236,72 @@ const about: About = {
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Windows Server & Windows Tools",
+        description: (
+          <>Knowledge of Windows Server and Windows tools.</>
+        ),
+        tags: [
+          {
+            name: "Windows Server",
+            icon: "windows",
+          },
+          {
+            name: "PowerShell",
+            icon: "powershell",
+          },
+          {
+            name: "Active Directory",
+            icon: "activeDirectory",
+          },
+          {
+            name: "Debloating",
+            icon: "debloating",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-06.jpg",
+            alt: "Project image",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "Cybersecurity",
+        description: (
+          <>Fundamentals of safety practices on system and networks.</>
+        ),
+        tags: [
+          {
+            name: "Fail2Ban",
+            icon: "fail2ban",
+          },
+          {
+            name: "Nmap",
+            icon: "nmap",
+          },
+          {
+            name: "Wireshark",
+            icon: "wireshark",
+          },
+          {
+            name: "John the Ripper",
+            icon: "johnTheRipper",
+          },
+        ],
+        // optional: leave the array empty if you don't want to display images
+        images: [
+          {
+            src: "/images/projects/project-01/cover-07.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
