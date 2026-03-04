@@ -80,16 +80,6 @@ export async function GET(request: Request) {
           >
             <span
               style={{
-                fontSize: "4.5rem",
-                lineHeight: "4.5rem",
-                whiteSpace: "pre-wrap",
-                textWrap: "balance",
-              }}
-            >
-              {person.name}
-            </span>
-            <span
-              style={{
                 fontSize: "2.5rem",
                 lineHeight: "2.5rem",
                 whiteSpace: "pre-wrap",
