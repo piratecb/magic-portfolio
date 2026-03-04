@@ -3,6 +3,8 @@ import "@once-ui-system/core/css/tokens.css";
 import "@/resources/custom.css";
 
 import classNames from "classnames";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, getLocale } from "next-intl/server";
 
 import {
   Background,
@@ -31,11 +33,15 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+  const htmlLang = locale === "pt" ? "pt-PT" : "en";
+
   return (
     <Flex
       suppressHydrationWarning
       as="html"
-      lang="en"
+      lang={htmlLang}
       fillWidth
       className={classNames(
         fonts.heading.variable,
@@ -104,6 +110,7 @@ export default async function RootLayout({
         />
       </head>
       <Providers>
+        <NextIntlClientProvider locale={locale} messages={messages}>
         <Column
           as="body"
           background="page"
@@ -164,6 +171,7 @@ export default async function RootLayout({
           </Flex>
           <Footer />
         </Column>
+        </NextIntlClientProvider>
       </Providers>
     </Flex>
   );

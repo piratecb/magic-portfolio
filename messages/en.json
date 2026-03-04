@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "work": "Work",
+    "blog": "Blog",
+    "gallery": "Gallery",
+    "contact": "Contact"
+  },
+  "home": {
+    "openToWork": "Open to work",
+    "viewProjects": "View Projects",
+    "headline": "Full-Stack development with a focus on systems and infrastructure",
+    "subline": "Full-stack developer with hands-on experience in <strong>Linux</strong> environments, system monitoring and backend architecture. Focused on building reliable and maintainable systems.",
+    "aboutButton": "About me",
+    "latestBlog": "Latest from the blog"
+  },
+  "about": {
+    "scheduleCall": "Schedule a call",
+    "introTitle": "Introduction",
+    "introText": "I'm a full-stack developer with a strong interest in Linux systems, infrastructure and backend architecture. Currently gaining experience in system monitoring and operational workflows in a professional environment.",
+    "workTitle": "Work Experience",
+    "studiesTitle": "Studies",
+    "technicalTitle": "Technical skills",
+    "experiences": {
+      "Kyndryl": {
+        "role": "IT Intern – Systems Monitoring",
+        "achievement1": "Monitoring scheduled jobs and system processes in production environment.",
+        "achievement2": "Observing system behavior and identifying recurring failure patterns.",
+        "achievement3": "Executing operational workflows and reporting system incidents."
+      },
+      "Hipercálculo II": {
+        "role": "Technician Intern",
+        "achievement1": "Repair of computers and other electronic devices, diagnosing hardware and software issues, replacing faulty components, and ensuring proper functionality.",
+        "achievement2": "Customer assisting, instalation of Ubiquiti APs and Server Rack montage."
+      },
+      "Catering Company": {
+        "role": "Waiter",
+        "achievement1": "Provided excellent customer service in a fast-paced environment, consistently. Events, Weddings.",
+        "achievement2": "Collaborated with team members to ensure smooth operations and customer satisfaction."
+      }
+    },
+    "institutions": {
+      "High School Jácome Ratton": "IT Technician - Systems.",
+      "Institute Polytechnic of Tomar": "Information Systems Technologies and Programming."
+    },
+    "skills": {
+      "Backend & Full-Stack": {
+        "description": "Experience building full-stack applications using modern web technologies."
+      },
+      "Linux & Systems": {
+        "description": "Experience working with Linux systems and infrastructure."
+      },
+      "Windows Server & Windows Tools": {
+        "description": "Knowledge of Windows Server and Windows tools."
+      },
+      "Cybersecurity": {
+        "description": "Fundamentals of safety practices on system and networks."
+      }
+    }
+  },
+  "work": {
+    "heading": "Projects – Bernardo Carvalheiro"
+  },
+  "contact": {
+    "heading": "Contact me",
+    "description": "Have a question or want to work together? Send me a message and I'll get back to you as soon as possible.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholder": "Your message...",
+    "send": "Send message",
+    "sending": "Sending...",
+    "successTitle": "Message sent!",
+    "successText": "Thank you for reaching out. I'll reply to {email} as soon as possible.",
+    "anotherMessage": "Send another message",
+    "networkError": "Network error. Please check your connection and try again.",
+    "genericError": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "buildWith": "Build your portfolio with"
+  }
+}

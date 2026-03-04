@@ -2,11 +2,13 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 import { Fade, Flex, Line, Row, ToggleButton } from "@once-ui-system/core";
 
 import { routes, display, person, about, blog, work, /*Gallery*/ } from "@/resources";
 import { ThemeToggle } from "./ThemeToggle";
+import { LanguageToggle } from "./LanguageToggle";
 import styles from "./Header.module.scss";
 
 type TimeDisplayProps = {
@@ -44,6 +46,7 @@ export default TimeDisplay;
 
 export const Header = () => {
   const pathname = usePathname() ?? "";
+  const t = useTranslations("nav");
 
   return (
     <>
@@ -96,7 +99,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="person"
                       href="/about"
-                      label={about.label}
+                      label={t("about")}
                       selected={pathname === "/about"}
                     />
                   </Row>
@@ -115,7 +118,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="grid"
                       href="/work"
-                      label={work.label}
+                      label={t("work")}
                       selected={pathname.startsWith("/work")}
                     />
                   </Row>
@@ -134,7 +137,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="book"
                       href="/blog"
-                      label={blog.label}
+                      label={t("blog")}
                       selected={pathname.startsWith("/blog")}
                     />
                   </Row>
@@ -172,7 +175,7 @@ export const Header = () => {
                     <ToggleButton
                       prefixIcon="email"
                       href="/contact"
-                      label="Contact"
+                      label={t("contact")}
                       selected={pathname === "/contact"}
                     />
                   </Row>
@@ -189,6 +192,8 @@ export const Header = () => {
                 <>
                   <Line background="neutral-alpha-medium" vert maxHeight="24" />
                   <ThemeToggle />
+                  <Line background="neutral-alpha-medium" vert maxHeight="24" />
+                  <LanguageToggle />
                 </>
               )}
             </Row>

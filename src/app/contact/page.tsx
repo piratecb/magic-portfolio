@@ -2,9 +2,11 @@
 
 import { Column, Heading, Text, Input, Button } from "@once-ui-system/core";
 import { person } from "@/resources";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function Contact() {
+  const t = useTranslations("contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -32,21 +34,20 @@ export default function Contact() {
         setMessage("");
       } else {
         setStatus("error");
-        setErrorMsg(data.error ?? "Something went wrong. Please try again.");
+        setErrorMsg(data.error ?? t("genericError"));
       }
     } catch {
       setStatus("error");
-      setErrorMsg("Network error. Please check your connection and try again.");
+      setErrorMsg(t("networkError"));
     }
   };
 
   return (
     <Column maxWidth="s" fillWidth gap="l" paddingX="l" paddingY="128">
       <Column gap="8">
-        <Heading variant="display-strong-s">Contact me</Heading>
+        <Heading variant="display-strong-s">{t("heading")}</Heading>
         <Text variant="body-default-l" onBackground="neutral-weak">
-          Have a question or want to work together? Send me a message and I'll get back to you as
-          soon as possible.
+          {t("description")}
         </Text>
       </Column>
 
@@ -61,16 +62,15 @@ export default function Contact() {
           align="center"
         >
           <Text variant="display-strong-xs" onBackground="brand-medium">✓</Text>
-          <Text variant="body-strong-m">Message sent!</Text>
+          <Text variant="body-strong-m">{t("successTitle")}</Text>
           <Text variant="body-default-m" onBackground="neutral-weak" align="center">
-            Thank you for reaching out. I'll reply to <strong>{person.email}</strong> as soon as
-            possible.
+            {t("successText", { email: person.email })}
           </Text>
           <Button
             variant="secondary"
             size="s"
             onClick={() => setStatus("idle")}
-            label="Send another message"
+            label={t("anotherMessage")}
           />
         </Column>
       ) : (
@@ -78,14 +78,14 @@ export default function Contact() {
           <Column gap="16">
             <Input
               id="name"
-              label="Name"
+              label={t("name")}
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
             />
             <Input
               id="email"
-              label="Email"
+              label={t("email")}
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -94,7 +94,7 @@ export default function Contact() {
             {/* Message textarea using once-ui styling */}
             <Column gap="8">
               <Text variant="label-default-s" onBackground="neutral-strong">
-                Message
+                {t("message")}
               </Text>
               <textarea
                 id="message"
@@ -102,7 +102,7 @@ export default function Contact() {
                 onChange={(e) => setMessage(e.target.value)}
                 required
                 rows={6}
-                placeholder="Your message..."
+                placeholder={t("placeholder")}
                 style={{
                   width: "100%",
                   padding: "var(--static-space-12) var(--static-space-16)",
@@ -135,7 +135,7 @@ export default function Contact() {
 
             <Button
               type="submit"
-              label={status === "loading" ? "Sending..." : "Send message"}
+              label={status === "loading" ? t("sending") : t("send")}
               disabled={status === "loading"}
               suffixIcon="arrowRight"
             />

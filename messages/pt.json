@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "work": "Projetos",
+    "blog": "Blog",
+    "gallery": "Galeria",
+    "contact": "Contacto"
+  },
+  "home": {
+    "openToWork": "Disponível para trabalho",
+    "viewProjects": "Ver Projetos",
+    "headline": "Desenvolvimento Full-Stack com foco em sistemas e infraestrutura",
+    "subline": "Programador full-stack com experiência prática em ambientes <strong>Linux</strong>, monitorização de sistemas e arquitetura backend. Focado em construir sistemas fiáveis e de fácil manutenção.",
+    "aboutButton": "Sobre mim",
+    "latestBlog": "Últimas publicações"
+  },
+  "about": {
+    "scheduleCall": "Agendar uma chamada",
+    "introTitle": "Introdução",
+    "introText": "Sou um programador full-stack com forte interesse em sistemas Linux, infraestrutura e arquitetura backend. Atualmente a ganhar experiência em monitorização de sistemas e fluxos operacionais num ambiente profissional.",
+    "workTitle": "Experiência Profissional",
+    "studiesTitle": "Formação",
+    "technicalTitle": "Competências Técnicas",
+    "experiences": {
+      "Kyndryl": {
+        "role": "Estagiário de IT – Monitorização de Sistemas",
+        "achievement1": "Monitorização de jobs agendados e processos de sistema em ambiente de produção.",
+        "achievement2": "Observação do comportamento do sistema e identificação de padrões de falhas recorrentes.",
+        "achievement3": "Execução de fluxos operacionais e reporte de incidentes do sistema."
+      },
+      "Hipercálculo II": {
+        "role": "Estagiário Técnico",
+        "achievement1": "Reparação de computadores e outros dispositivos eletrónicos, diagnóstico de problemas de hardware e software, substituição de componentes defeituosos e garantia de funcionamento adequado.",
+        "achievement2": "Apoio a clientes, instalação de APs Ubiquiti e montagem de Rack de Servidores."
+      },
+      "Catering Company": {
+        "role": "Empregado de Mesa",
+        "achievement1": "Prestação de excelente serviço ao cliente num ambiente dinâmico, de forma consistente. Eventos, Casamentos.",
+        "achievement2": "Colaboração com a equipa para garantir operações fluídas e satisfação do cliente."
+      }
+    },
+    "institutions": {
+      "High School Jácome Ratton": "Técnico de Informática - Sistemas.",
+      "Institute Polytechnic of Tomar": "Tecnologias e Programação de Sistemas de Informação."
+    },
+    "skills": {
+      "Backend & Full-Stack": {
+        "description": "Experiência na construção de aplicações full-stack com tecnologias web modernas."
+      },
+      "Linux & Systems": {
+        "description": "Experiência a trabalhar com sistemas Linux e infraestrutura."
+      },
+      "Windows Server & Windows Tools": {
+        "description": "Conhecimento de Windows Server e ferramentas Windows."
+      },
+      "Cybersecurity": {
+        "description": "Fundamentos de boas práticas de segurança em sistemas e redes."
+      }
+    }
+  },
+  "work": {
+    "heading": "Projetos – Bernardo Carvalheiro"
+  },
+  "contact": {
+    "heading": "Contacta-me",
+    "description": "Tens alguma questão ou queres trabalhar em conjunto? Envia-me uma mensagem e responderei o mais breve possível.",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Mensagem",
+    "placeholder": "A tua mensagem...",
+    "send": "Enviar mensagem",
+    "sending": "A enviar...",
+    "successTitle": "Mensagem enviada!",
+    "successText": "Obrigado pelo contacto. Responderei para {email} o mais breve possível.",
+    "anotherMessage": "Enviar outra mensagem",
+    "networkError": "Erro de rede. Por favor verifica a tua ligação e tenta novamente.",
+    "genericError": "Algo correu mal. Por favor tenta novamente."
+  },
+  "footer": {
+    "buildWith": "Constrói o teu portfólio com"
+  }
+}
