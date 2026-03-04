@@ -196,6 +196,15 @@ const about: About = {
           { name: "Node.js", icon: "javascript" },
           { name: "PostgreSQL", icon: "database" },
           { name: "Supabase", icon: "supabase" },
+          { name: "C", icon: "C" },
+          { name: "Python", icon: "python" },
+          { name: "Java", icon: "java" },
+          { name: "Strapi", icon: "strapi" },
+          { name: "HTML", icon: "html" },
+          { name: "CSS", icon: "css" },
+          { name: "PHP", icon: "php" },
+          { name: "Tailwind CSS", icon: "tailwind" },
+          { name: "Power Apps", icon: "powerApps" },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
@@ -231,6 +240,10 @@ const about: About = {
             name: "Nginx",
             icon: "nginx",
           },
+          {
+            name: "Docker",
+            icon: "docker",
+          },
         ],
         // optional: leave the array empty if you don't want to display images
         images: [
@@ -263,6 +276,10 @@ const about: About = {
           {
             name: "Debloating",
             icon: "debloating",
+          },
+          {
+            name: "Office",
+            icon: "office",
           },
         ],
         // optional: leave the array empty if you don't want to display images
