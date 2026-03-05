@@ -59,8 +59,8 @@ const home: Home = {
   path: "/",
   image: "/images/og/home-v2.jpg",
   label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
+  title: `Bernardo Carvalheiro – Full-Stack Developer | Next.js & Linux`,
+  description: `Portfolio of Bernardo Carvalheiro, Full-Stack Developer based in Lisbon, Portugal. Specializing in Next.js, Node.js, Linux infrastructure and backend architecture.`,
   headline: <>Bernardo Carvalheiro</>,
   featured: {
     display: true,
@@ -88,7 +88,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet Bernardo Carvalheiro, Full-Stack Developer based in Lisbon, Portugal. Focused on Linux systems, Next.js and backend architecture.`,
   tableOfContent: {
     display: true,
     subItems: false,
