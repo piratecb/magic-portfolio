@@ -54,11 +54,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         <Column gap="12" paddingTop="4" style={{ alignItems: "center" }}>
           {avatars?.length > 0 && <AvatarGroup avatars={avatars} size="m" reverse />}
           {description?.trim() && (
-            <Text wrap="balance" variant="body-default-s" onBackground="neutral-weak">
+            <Text wrap="balance" align="center" variant="body-default-s" onBackground="neutral-weak">
               {description}
             </Text>
           )}
-          <Flex gap="24" wrap>
+          <Flex gap="24" wrap horizontal="center">
             {content?.trim() && (
               <SmartLink
                 suffixIcon="arrowRight"
