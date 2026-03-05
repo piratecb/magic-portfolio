@@ -1,0 +1,47 @@
+---
+title: "Flordle"
+publishedAt: "2026-03-05"
+summary: "A Wordle clone built in Flutter with Portuguese (Portugal) words, featuring a daily word mode, unlimited mode, Firebase authentication, and cloud-synced statistics."
+images:
+  - "/images/projects/project-01/cover-09.jpg"
+objectFit: "contain"
+team:
+  - name: "Bernardo Carvalheiro"
+    role: "Flutter Developer"
+    avatar: "/images/avatar.jpg"
+    linkedIn: ""
+---
+
+## Overview
+
+Flordle is a Wordle-inspired word-guessing game built in Flutter, focused on the Portuguese (Portugal) language. Players have 6 attempts to guess a secret 5-letter word, with colour-coded feedback after each guess: green for the correct letter in the right position, yellow for the correct letter in the wrong position, and grey for a letter that does not exist in the word.
+
+## Game Modes
+
+- **Palavra do Dia**: One word per day, the same for all players. Limited to one game per day.
+- **Modo Ilimitado**: Play as many times as desired with different random words.
+
+## Key Features
+
+- **Statistics**: Tracks games played, win rate, current streak, max streak, average attempts, and full guess distribution from 1 to 6.
+- **Authentication**: Login with Email/Password or continue as a Guest, with optional Firebase cloud sync.
+- **Persistence**: Daily game state is saved locally so progress is never lost when closing the app.
+- **Palavras**: Over 365 Portuguese 5-letter words, all uppercase and accent-free.
+
+## Technologies Used
+
+- **Flutter**: Cross-platform UI framework for Android and iOS
+- **Dart**: Programming language for the entire app
+- **Firebase Auth**: User authentication with Email/Password and Guest mode
+- **Firestore**: NoSQL cloud database for player statistics sync
+- **SharedPreferences**: Local storage for the daily game state
+- **Provider**: State management package across the app
+
+## Challenges and Learnings
+
+Setting up Firebase in a Flutter project for the first time required understanding how to structure Firestore documents for real-time data sync. Building the daily word logic — ensuring every player sees the same word on a given day without a server call — was solved using a date-based deterministic seed for the word selection.
+
+## Outcome
+
+A fully functional Wordle clone in Portuguese with two game modes, persistent cloud-backed statistics, and Firebase authentication. The project deepened my experience with Flutter state management, Firebase integration, and mobile app development.
+

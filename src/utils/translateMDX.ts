@@ -85,9 +85,25 @@ function isListLine(line: string): boolean {
  * smaller chunks first if needed.
  */
 async function translateBlock(text: string, langPair: string): Promise<string> {
-  const chunks = splitIntoChunks(text);
+  // Protect **bold** markers — the translation API inserts spaces around them
+  const boldMap: Record<string, string> = {};
+  let boldIdx = 0;
+  const safeText = text.replace(/\*\*(.+?)\*\*/g, (match) => {
+    const key = `XBOLD${boldIdx++}X`;
+    boldMap[key] = match;
+    return key;
+  });
+
+  const chunks = splitIntoChunks(safeText);
   const results = await Promise.all(chunks.map((c) => translateChunk(c, langPair)));
-  return results.join("");
+  let result = results.join("");
+
+  // Restore **bold** markers
+  for (const [key, value] of Object.entries(boldMap)) {
+    result = result.split(key).join(value);
+  }
+
+  return result;
 }
 
 /**
