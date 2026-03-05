@@ -32,19 +32,19 @@ const social: Social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "",
     essential: false,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "/",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "",
     essential: false,
   },*/
   {
@@ -57,7 +57,7 @@ const social: Social = [
 
 const home: Home = {
   path: "/",
-  image: "/images/og/home.jpg",
+  image: "/images/og/home-v2.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
@@ -129,7 +129,7 @@ const about: About = {
           // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Once UI Project",
+            alt: "Kyndryl – IT Systems Monitoring dashboard",
             width: 16,
             height: 9,
           },
@@ -210,13 +210,13 @@ const about: About = {
         images: [
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Project image",
+            alt: "Next.js",
             width: 16,
             height: 9,
           },
           {
             src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "Supabase dashboard",
             width: 16,
             height: 9,
           },
@@ -249,7 +249,7 @@ const about: About = {
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "Linux terminal and system infrastructure environment",
             width: 16,
             height: 9,
           },
@@ -286,7 +286,7 @@ const about: About = {
         images: [
           {
             src: "/images/projects/project-01/cover-06.jpg",
-            alt: "Project image",
+            alt: "Windows Server and Active Directory administration",
             width: 16,
             height: 9,
           },
@@ -319,7 +319,7 @@ const about: About = {
         images: [
           {
             src: "/images/projects/project-01/cover-07.jpg",
-            alt: "Project image",
+            alt: "Cybersecurity tools – network analysis and penetration testing",
             width: 16,
             height: 9,
           },
@@ -332,7 +332,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about development and tech...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -342,7 +342,7 @@ const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Full-stack and infrastructure projects by Bernardo Carvalheiro – Next.js, Node.js, Linux and backend systems.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
