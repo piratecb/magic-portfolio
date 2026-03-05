@@ -73,7 +73,7 @@ const home: Home = {
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/my-project-template",
   },
   subline: (
     <>
@@ -144,7 +144,7 @@ const about: About = {
             Repair of computers and other electronic devices, diagnosing hardware and software issues, replacing faulty components, and ensuring proper functionality.
           </>,
           <>
-            Customer assisting, instalation of Ubiquiti APs and Server Rack montage.
+            Customer assisting, installation of Ubiquiti APs and Server Rack assembly.
           </>,
         ],
         images: [],
